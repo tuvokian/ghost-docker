@@ -22,7 +22,7 @@ services:
 
   ghost:
     # Do not alter this without updating the Tinybird Sync container as well
-    image: ghost:6.5.0-alpine
+    image: ghost:6.7.0-alpine
     restart: always
     expose:
       - "127.0.0.1:${GHOST_PORT:-2368}:2368"
@@ -145,7 +145,7 @@ services:
 
   tinybird-sync:
     # Do not alter this without updating the Ghost container as well
-    image: ghost:6.5.0-alpine
+    image: ghost:6.7.0-alpine
     command: >
       sh -c "
         if [ -d /var/lib/ghost/current/core/server/data/tinybird ]; then
